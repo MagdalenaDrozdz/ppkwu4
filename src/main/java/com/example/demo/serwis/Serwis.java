@@ -33,6 +33,8 @@ public class Serwis {
 
     public String getUsers(@ModelAttribute Data data, Model model) {
         Document document = null;
+        Elements elements;
+        List<User> userList = new ArrayList<>();
 
         try {
             document = Jsoup.connect("https://panoramafirm.pl/szukaj?k=" + data.getName()).get();
@@ -40,8 +42,19 @@ public class Serwis {
             e.printStackTrace();
         }
 
-        System.out.println(document);
+        elements = document.select("li.card.company-item");
 
+        for (Element e: elements) {
+            User user = new User();
+
+            String name = e.select("h2").text();
+            System.out.println(name);
+            user.setName(name);
+
+            userList.add(user);
+        }
+
+        model.addAttribute("users", userList);
         return "users";
     }
 }
