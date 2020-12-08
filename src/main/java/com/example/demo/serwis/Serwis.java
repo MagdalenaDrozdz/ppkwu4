@@ -48,8 +48,19 @@ public class Serwis {
             User user = new User();
 
             String name = e.select("h2").text();
-            System.out.println(name);
+            String telefon = e.select("a.icon-telephone").attr("title");
+            String web = e.select("a.icon-website").attr("href");
+            String mail = e.select("a.ajax-modal-link").attr("data-company-email");
+            String address = e.select("div.address").text();
+            String szer = e.select("a.icon-check-point").attr("data-lat");
+            String dlug = e.select("a.icon-check-point").attr("data-lon");
             user.setName(name);
+            user.setAddress(address);
+            user.setMail(mail);
+            user.setNumber(telefon);
+            user.setWeb(web);
+            user.setSzer(szer);
+            user.setDlug(dlug);
 
             userList.add(user);
         }
