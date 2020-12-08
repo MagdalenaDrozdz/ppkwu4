@@ -1,5 +1,5 @@
 # Mobilny vCard PŁ
-API, które dla wpisanego rodzaju fachowca wyszukuje wszystkich fachowców z tej kategorii ze strony z https://panoramafirm.pl/szukaj.
+API, które dla wpisanego rodzaju fachowca wyszukuje wszystkich fachowców na podstawie wyszukiwarki ze strony z https://panoramafirm.pl/szukaj.
 
 # Działanie
 Podajemy adres:
@@ -11,7 +11,7 @@ Pojawia nam się wyszukiwarka, w której możemy podać nazwę fachowca jakiego 
 ```
 localhost:8080/users
 ```
-Na stronie dostajemy wyniki wyszukiwania. Wszytskich znalezionych fachowców i ich dane.
+Na stronie dostajemy wyniki wyszukiwania. Wszytskich znalezionych fachowców i ich dane: nazwę, adres, telefon, mail, stronę internetową.
 
 
 
