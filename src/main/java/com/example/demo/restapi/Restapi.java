@@ -31,7 +31,7 @@ public class Restapi {
 
     @RequestMapping(value = "/users", method = RequestMethod.POST)
     public String getUsers(@ModelAttribute Data data, Model model){
-        return "users";
+        return serwis.getUsers(data,model);
     }
 
 
