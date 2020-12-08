@@ -6,10 +6,12 @@
 </head>
 <body>
     <h3>
-        Podaj nazwę fachowca:
+       Podaj nazwę fachowca:
     </h3>
 
-
-
+    <form action="#" th:action="@{/users}" th:object="${data}" method="post">
+        <input type="text" th:field="*{name}" />
+        <input type="submit" th:value="Wyszukaj"/>
+    </form>
 </body>
 </html>

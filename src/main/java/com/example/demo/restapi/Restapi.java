@@ -29,5 +29,10 @@ public class Restapi {
         return serwis.getData(model);
     }
 
+    @RequestMapping(value = "/users", method = RequestMethod.POST)
+    public String getUsers(@ModelAttribute Data data, Model model){
+        return "users";
+    }
+
 
 }
