@@ -11,9 +11,18 @@ Pojawia nam się wyszukiwarka, w której możemy podać nazwę fachowca jakiego 
 ```
 localhost:8080/users
 ```
-Na stronie dostajemy wyniki wyszukiwania. Wszytskich znalezionych fachowców i ich dane: nazwę, adres, telefon, mail, stronę internetową.
+Na stronie dostajemy wyniki wyszukiwania -wszystkich znalezionych fachowców i ich dane: nazwę, adres, telefon, mail, stronę internetową, link do mapy z lokalizacją firmy i link do generowania wizytówki dla danej firmy.
+Jeśli wybierzemy generowanie wizytówki vcard to przejdziemy pod adres:
 
-
+```
+localhost:8080/card/{idFirmy}
+```
+idFirmy - to identyfikator przypisany wyszukanym na danej stronie firmą, określa dla której firmy chcemy wygenerować wizytówkę
+Pod danym adresem zostanie wygenerowana wizytówka vcard w postaci pliku vcf. Przykładowy wygenerowany plik: https://github.com/MagdalenaDrozdz/ppkwu4/blob/main/cardUser0.vcf
+Na stronie mamy możliwość przechodzenia do kolejnych stron poprzez przycisku next na końcu strony, zostaniemy  przekierowani do kolejnej stronny z wyszukanymi firmami. 
+```
+localhost:8080/users/next
+```
 
 
 
