@@ -6,18 +6,10 @@ public class User {
     String number;
     String web;
     String mail;
-    String mapa;
     String szer;
     String dlug;
-    String description;
+    String vcard;
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 
     public String getSzer() {
         return szer;
@@ -59,14 +51,6 @@ public class User {
         this.web = web;
     }
 
-    public String getMapa() {
-        return mapa;
-    }
-
-    public void setMapa(String mapa) {
-        this.mapa = mapa;
-    }
-
     public String getName() {
         return name;
     }
@@ -84,5 +68,18 @@ public class User {
     }
 
     public User() {
+    }
+
+    public String getVcard() {
+        return vcard;
+    }
+
+    public void setVcard(String vcard) {
+        this.vcard = vcard;
+    }
+
+    @Override
+    public String toString() {
+        return vcard;
     }
 }

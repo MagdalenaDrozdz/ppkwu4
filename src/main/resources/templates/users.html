@@ -13,7 +13,7 @@
         <div th:text="${user.getMail()}"></div>
         <div th:text="${user.getMail()}"></div>
         <div >
-            <a th:href="@{/}">
+            <a th:href="@{'/card/' + ${user.toString()}}">
                 <span>Wygeneruj vCard</span>
             </a>
         </div>

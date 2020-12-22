@@ -34,5 +34,10 @@ public class Restapi {
         return serwis.getUsers(data,model);
     }
 
+    @RequestMapping(value = "/card/{user}", method = RequestMethod.GET)
+    @ResponseBody
+    public ResponseEntity<Resource> getCard(@PathVariable String user, Model model) throws IOException {
+        return serwis.getCard(user, model);
+    }
 
 }
