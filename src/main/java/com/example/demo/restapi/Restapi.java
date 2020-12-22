@@ -40,4 +40,10 @@ public class Restapi {
         return serwis.getCard(user, model);
     }
 
+    @RequestMapping(value = "/users/next", method = RequestMethod.GET)
+    public String getUsersNext(@ModelAttribute Data data, Model model){
+        return serwis.getUsersNext(data,model);
+    }
+
+
 }

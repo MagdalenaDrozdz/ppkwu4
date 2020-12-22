@@ -32,6 +32,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 
 public class Serwis {
     List<User> userList = new ArrayList<User>();
+    Data dataSearched = new Data();
 
     public String getData(Model model) {
         Data data = new Data();
@@ -43,8 +44,14 @@ public class Serwis {
         Document document = null;
         Elements elements;
         int i=0;
+
+        if(data.getName() != null && !data.getName().isEmpty()) {
+            dataSearched.setName(data.getName());
+            dataSearched.setPage(1);
+        }
         try {
-            document = Jsoup.connect("https://panoramafirm.pl/szukaj?k=" + data.getName()).get();
+            document = Jsoup.connect("https://panoramafirm.pl/" + dataSearched.getName() + "/firmy,"+ dataSearched.getPage() + ".html").get();
+            userList.clear();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -81,6 +88,7 @@ public class Serwis {
         VCard card = new VCard();
         User user = new User();
         HttpHeaders headers = new HttpHeaders();
+        String nameFile = "card"+userForCard+".vcf";
         File file= new File("card.vcf");
         Address address1 = new Address();
 
@@ -127,6 +135,11 @@ public class Serwis {
         return ResponseEntity.ok()
                 .headers(headers)
                 .body(fileSystemResource);
+    }
+
+    public String getUsersNext(@ModelAttribute Data data, Model model) {
+        dataSearched.setPage(dataSearched.getPage()+1);
+        return getUsers(data,model);
     }
 
 }

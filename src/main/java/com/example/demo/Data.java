@@ -2,6 +2,7 @@ package com.example.demo;
 
 public class Data {
     String name;
+    int Page;
 
     public Data() {
     }
@@ -14,4 +15,11 @@ public class Data {
         this.name = name;
     }
 
+    public int getPage() {
+        return Page;
+    }
+
+    public void setPage(int page) {
+        Page = page;
+    }
 }
