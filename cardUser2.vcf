@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:4.0
+PRODID:ez-vcard 0.10.5
+REV:20201222T140512Z
+FN:Kamil Przęczek
+EMAIL:kamilprzeczek@interia.pl
+TEL:516 765 572
+URL:http://www.hydraulik-instalacje-krakow.pl
+ADR:;;;Grabówki 12;;32-020 ;Polska
+END:VCARD

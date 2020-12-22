@@ -88,7 +88,7 @@ public class Serwis {
         VCard card = new VCard();
         User user = new User();
         HttpHeaders headers = new HttpHeaders();
-        String nameFile = "card"+userForCard+".vcf";
+        String nameFile = "cardUser"+userForCard+".vcf";
         File file= new File(nameFile);
         Address address1 = new Address();
 
