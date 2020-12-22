@@ -11,7 +11,9 @@
         <div th:text="${user.getNumber()}"></div>
         <div th:text="${user.getWeb()}"></div>
         <div th:text="${user.getMail()}"></div>
-        <div th:text="${user.getMail()}"></div>
+        <a th:href="@{'https://www.google.com/maps/search/?api=1&query=' + ${user.getSzer()}+','+ ${user.getDlug()}}">
+            <span>Link do mapy</span>
+        </a>
         <div >
             <a th:href="@{'/card/' + ${user.toString()}}">
                 <span>Wygeneruj vCard</span>
