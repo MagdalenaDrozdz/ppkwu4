@@ -89,7 +89,7 @@ public class Serwis {
         User user = new User();
         HttpHeaders headers = new HttpHeaders();
         String nameFile = "card"+userForCard+".vcf";
-        File file= new File("card.vcf");
+        File file= new File(nameFile);
         Address address1 = new Address();
 
         for(User u: userList){
@@ -129,9 +129,9 @@ public class Serwis {
             e.printStackTrace();
         }
 
-        headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=card.vcf");
+        headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename="+nameFile);
 
-        Resource fileSystemResource = new FileSystemResource("card.vcf");
+        Resource fileSystemResource = new FileSystemResource(nameFile);
         return ResponseEntity.ok()
                 .headers(headers)
                 .body(fileSystemResource);
