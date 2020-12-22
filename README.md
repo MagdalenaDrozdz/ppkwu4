@@ -17,9 +17,10 @@ Jeśli wybierzemy generowanie wizytówki vcard to przejdziemy pod adres:
 ```
 localhost:8080/card/{idFirmy}
 ```
-idFirmy - to identyfikator przypisany wyszukanym na danej stronie firmom, określa dla której firmy chcemy wygenerować wizytówkę
-Pod danym adresem zostanie wygenerowana wizytówka vcard w postaci pliku vcf. Przykładowy wygenerowany plik: https://github.com/MagdalenaDrozdz/ppkwu4/blob/main/cardUser0.vcf
-Na stronie mamy możliwość przechodzenia do kolejnych stron poprzez przycisk next na końcu strony, zostaniemy  przekierowani do kolejnej strony z wyszukanymi firmami po adres: 
+idFirmy - to identyfikator przypisany wyszukanym na danej stronie firmom, określa dla której firmy chcemy wygenerować wizytówkę.
+Pod danym adresem zostanie wygenerowana wizytówka vcard w postaci pliku vcf. 
+Przykładowy wygenerowany plik: https://github.com/MagdalenaDrozdz/ppkwu4/blob/main/cardUser0.vcf
+Na stronie mamy możliwość przechodzenia do kolejnych stron poprzez przycisk next na końcu strony, zostaniemy przekierowani do kolejnej strony z wyszukanymi firmami, pod adres: 
 ```
 localhost:8080/users/next
 ```
